@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.about-me {
+    color: rgb(78, 78, 237);
+    position: fixed;
+    margin: auto
+}
+
+.background-con h1{
+    color: black;
+    position: fixed;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.landing h1{
+    color: #1E1E1E;
+    line-height: 25px;
+}
+
+.landing h2{
+    color: #383838;
+}
+
+.landing img {
+    border-radius: 360px;
+    margin-top: 30px;
+    border:rgb(78, 78, 237) 2.5px solid;
+}
