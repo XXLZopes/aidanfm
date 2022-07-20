@@ -2,7 +2,6 @@ body {
     height: 200vh;
     margin: 0;
     background-color: rgb(255, 171, 171);
-    /* position: absolute; */
 }
 .circle {
     border-radius: 360px;

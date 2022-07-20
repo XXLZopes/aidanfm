@@ -1,5 +1,5 @@
 const backgroundEl = document.querySelector('#background');
-const testEl = document.querySelector('#body')
+const mainEl = document.querySelector('#main')
 
 class Circle {
     constructor(x, y, r, color, txt) {
@@ -59,4 +59,4 @@ function generateCircles (circleArray, parentElement, className) {
 }
 
 generateCircles(circles, backgroundEl, 'circle');
-generateCircles(circles, testEl, 'circle1');
+generateCircles(circles, mainEl, 'circle1');

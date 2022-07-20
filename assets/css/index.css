@@ -60,19 +60,31 @@ h1, h2, h3 {
 
 .landing .socials {
     position: absolute;
-    bottom: 0px;
+    bottom: 10%;
     width: 100%;
-    background-color: #687278;
     padding: 10px 0 25px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.landing .socials i {
-    font-size: 32px;
-    color: rgb(237, 249, 255);
+.socials2 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0 25px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+.landing .socials i, .socials2 i {
+    font-size: 32px;
+    color: #1E1E1E;
+}
+
+
 
 .landing-nav {
     width: 100%;

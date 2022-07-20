@@ -4,7 +4,6 @@ backgroundContainerEl.style.height = document.documentElement.clientHeight + 'px
 backgroundContainerEl.style.width = '100.0vw'
 
 let scrollArray = [window.scrollY]
-let totalScroll = 0;
 
 let currentHeight = document.documentElement.clientHeight;
 
