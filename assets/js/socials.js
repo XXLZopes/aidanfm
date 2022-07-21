@@ -27,5 +27,5 @@ console.log(domEl.style.opacity)
 }
 
 window.addEventListener("scroll", function () {
-    changeOpacity(socials1El, socials2El, .07, .18);
+    changeOpacity(socials1El, socials2El, .18, .18);
 })
