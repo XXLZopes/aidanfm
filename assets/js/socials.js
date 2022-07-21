@@ -38,4 +38,4 @@ window.addEventListener("scroll", function () {
     changeOpacity(socials1El, socials2El, .07, .18);
 })
 
-detectChrome() ? socials1El.style.bottom = '13%' : socials1El.style.bottom = '10%';
+detectChrome() ? socials1El.style.bottom = '50%' : socials1El.style.bottom = '10%';
