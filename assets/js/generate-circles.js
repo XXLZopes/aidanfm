@@ -28,7 +28,7 @@ function generateCircles (circleArray, parentElement, className) {
         let circleEl = document.createElement('div');
     
         //Circle START
-        circleEl.setAttribute('id', `circle${i}`);
+        circleEl.setAttribute('id', `${className}${i}`);
         circleEl.setAttribute('class', className);
     
         if(circle.x < 0) {
