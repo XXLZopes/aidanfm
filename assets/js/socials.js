@@ -1,11 +1,3 @@
-function detectChrome () {
-    if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('CriOS') > -1) {
-        return true;
-    }
-    return false;
-}
-
-
 const socials1El = document.querySelector('#socials1')
 const socials2El = document.querySelector('#socials2')
 
@@ -37,5 +29,3 @@ console.log(domEl.style.opacity)
 window.addEventListener("scroll", function () {
     changeOpacity(socials1El, socials2El, .07, .18);
 })
-
-detectChrome() ? socials1El.style.bottom = '50%' : socials1El.style.bottom = '10%';
