@@ -2,27 +2,51 @@ const circleEl4 = document.getElementById('circle4');
 const circle1El4 = document.getElementById('circle14');
 
 class CircleAnimate {
-    constructor (circleEl, maxSize, minSize, maxY, minY, maxX, minX) {
+    constructor (circleEl) {
         this.circleEl = circleEl;
-        this.maxSize = maxSize || 0;
-        this.minSize = minSize  || 0;
-        this.maxY = maxY  || 0;
-        this.minY = minY || 0;
-        this.maxX = maxX || 0;
-        this.minX = minX || 0;
+        // this.maxSize = maxSize || 0;
+        // this.minSize = minSize  || 0;
+        // this.maxY = maxY  || 0;
+        // this.minY = minY || 0;
+        // this.maxX = maxX || 0;
+        // this.minX = minX || 0;
         this.grow = true;
         this.moveDown = true;
         this.moveLeft = true;
     }
+    setMaxSize (maxSize) {
+        this.maxSize = maxSize
+    }
+    setMinSize (minSize) {
+        this.minSize = minSize
+    }
+    setMaxY (maxY) {
+        this.maxY = maxY
+    }
+    setMinY (minY) {
+        this.minY = minY
+    }
+    setMaxX (maxX) {
+        this.maxX = maxX
+    }
+    setMinX (minX) {
+        this.minX = minX
+    }
 }
-let circleAC0 = new CircleAnimate(document.getElementById('circle0'), 20, 15);
-let circleAC0b = new CircleAnimate(document.getElementById('circle10'), 20, 15);
+let circleAC0 = new CircleAnimate(document.getElementById('circle0'));
+let circleAC0b = new CircleAnimate(document.getElementById('circle10'));
 
-let circleAC3 = new CircleAnimate(document.getElementById('circle3'), null, null, 470, 350);
-let circleAC3b  = new CircleAnimate(document.getElementById('circle13'), null, null, 470, 350);
+let circleAC3 = new CircleAnimate(document.getElementById('circle3'));
+let circleAC3b  = new CircleAnimate(document.getElementById('circle13'));
 
-function changeSize(circle, speed) {
+let circleAC4 = new CircleAnimate(document.getElementById('circle4'));
+let circleAC4b  = new CircleAnimate(document.getElementById('circle14'));
+
+function changeSize(circle, circle2, max, min, speed) {
     let circleEl = circle.circleEl;
+    let circleEl2 = circle2.circleEl
+    circle.setMaxSize(max);
+    circle.setMinSize(min);
     let maxSize = circle.maxSize;
     let minSize = circle.minSize;
     let grow = circle.grow
@@ -43,13 +67,19 @@ function changeSize(circle, speed) {
             circle.grow = true
         }
     }
+
+    circleEl2.style.height = circleEl.style.height;
+    circleEl2.style.width = circleEl.style.width;
 }
 
-console.log(circleAC3.maxY)
-
-function moveY(circle, speed) {
+function moveY(circle, circle2, max, min, speed) {
 
     let circleEl = circle.circleEl;
+    let circleEl2 = circle2.circleEl;
+
+    circle.setMaxY(max);
+    circle.setMinY(min)
+
     let maxY = circle.maxY;
     let minY = circle.minY;
     let circleY = parseFloat(circleEl.style.top);
@@ -67,31 +97,38 @@ function moveY(circle, speed) {
             circle.moveDown = true
         }
     }
+    circleEl2.style.top = circleEl.style.top;
 }
 
-function moveX(circleEl, maxX, minX, speed) {
-    circleX = parseFloat(circleEl.style.right);
+function moveX(circle, circle2, max, min, speed) {
 
-    if (circleX <= maxX && this.moveLeft) {
+    let circleEl = circle.circleEl
+    let circleEl2 = circle2.circleEl;
+
+    circleX = parseFloat(circleEl.style.right);
+    circle.setMaxX(max);
+    circle.setMinX(min);
+    maxX = circle.maxX;
+    minX = circle.minX;
+
+    if (circleX <= maxX && circle.moveLeft) {
         circleEl.style.right = circleX + speed + 'px'
         if (parseFloat(circleEl.style.right) >= maxX) {
-            this.moveLeft = false
+            circle.moveLeft = false
         }
     }
-    else if (circleX >= minX && !this.moveLeft) {
+    else if (circleX >= minX && !circle.moveLeft) {
         circleEl.style.right = circleX - speed + 'px'
         if (parseFloat(circleEl.style.right) <= minX) {
-            this.moveLeft = true
+            circle.moveLeft = true
         }
     }
+    circleEl2.style.right = circleEl.style.right;
 }
 
 
-setInterval(function () {changeSize(circleAC0, .02)}, 10);
-setInterval(function () {changeSize(circleAC0b, .02)}, 10);
+setInterval(function () {changeSize(circleAC0, circleAC0b, 20, 15, .02)}, 10);
 
-setInterval(function () {moveY(circleAC3, .15)}, 10);
-setInterval(function () {moveY(circleAC3b, .15)}, 10);
+setInterval(function () {moveY(circleAC3, circleAC3b, 470, 350, .15)}, 10);
 
-setInterval(function () {moveX(circleEl4, 100, 0, .25)}, 10);
-setInterval(function () {moveX(circle1El4, 100, 0, .25)}, 10);
+setInterval(function () {moveX(circleAC4, circleAC4b, 100, 0, .25)}, 10);

@@ -31,7 +31,6 @@ function adjustHeight(curtain) {
     let heightDifference = maxHeight - currentHeight;
     let adjustedHeight =  curtainHeight + heightDifference;
     curtain.style.height = adjustedHeight + 'px'
-    console.log(heightDifference, maxHeight, currentHeight)
 
 
 }
