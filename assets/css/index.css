@@ -19,7 +19,7 @@ h1, h2, h3 {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
-.about-me {
+.past-work {
     color: #f3fd82;
     position: fixed;
     margin: auto
@@ -98,4 +98,13 @@ h1, h2, h3 {
     color: #1E1E1E;
     line-height: 15px;
     font-size: 20px;
+}
+
+.fa-bars {
+    font-size: 30px;
+    z-index: 50;
+    position: fixed;
+    right: 0;
+    margin: 20px;
+    color: #1E1E1E;
 }

@@ -23,7 +23,6 @@ if (window.scrollY == 0) {
     domEl.style.opacity = 1;
     domEl2.style.opacity = 0;
 }
-console.log(domEl.style.opacity)
 }
 
 window.addEventListener("scroll", function () {

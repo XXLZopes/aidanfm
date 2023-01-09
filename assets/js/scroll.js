@@ -1,5 +1,7 @@
 const backgroundContainerEl = document.querySelector('#background-con');
 
+const imgConEl = document.querySelector('.img-con');
+
 backgroundContainerEl.style.height = document.documentElement.clientHeight + 'px';
 backgroundContainerEl.style.width = '100.0vw'
 
@@ -31,7 +33,6 @@ function adjustHeight(curtain) {
     let heightDifference = maxHeight - currentHeight;
     let adjustedHeight =  curtainHeight + heightDifference;
     curtain.style.height = adjustedHeight + 'px'
-    console.log(heightDifference, maxHeight, currentHeight)
 
 
 }
