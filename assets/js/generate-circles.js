@@ -1,5 +1,5 @@
-const backgroundEl = document.querySelector('#background');
-const mainEl = document.querySelector('#main')
+const page1El = document.querySelector('#page1');
+const page2El = document.querySelector('#page2')
 
 class Circle {
     constructor(x, y, r, color, txt) {
@@ -13,16 +13,19 @@ class Circle {
         this.x = x;
         this.y = y;
     }
+    setY(y) {
+        this.y = y;
+    }
 }
 //Declare circle
 let circle0 = new Circle('0', '0', '15', '#A3BECC', 'hi');
 let circle1 = new Circle('30', '150', '20', 'red', 'hi');
 let circle2 = new Circle('-1', '250', '27', 'red', 'hi');
 let circle3 = new Circle('30', '400', '15', 'red', 'hi');
-let circle4 = new Circle('-1', '-1', '33', 'red', 'hi');
+let circle4 = new Circle('-1', '700', '33', 'red', 'hi');
 
 let circles = [circle0, circle1, circle2, circle3, circle4]
-
+circle4.setY(window.innerHeight - 3.9*circle4.r);
 function generateCircles (circleArray, parentElement, className) {
     circleArray.forEach((circle, i) => {
         let circleEl = document.createElement('div');
@@ -58,5 +61,5 @@ function generateCircles (circleArray, parentElement, className) {
 
 }
 
-generateCircles(circles, backgroundEl, 'circle');
-generateCircles(circles, mainEl, 'circle1');
+generateCircles(circles, page1El, 'circle');
+generateCircles(circles, page2El, 'circle1');

@@ -4,12 +4,6 @@ const circle1El4 = document.getElementById('circle14');
 class CircleAnimate {
     constructor (circleEl) {
         this.circleEl = circleEl;
-        // this.maxSize = maxSize || 0;
-        // this.minSize = minSize  || 0;
-        // this.maxY = maxY  || 0;
-        // this.minY = minY || 0;
-        // this.maxX = maxX || 0;
-        // this.minX = minX || 0;
         this.grow = true;
         this.moveDown = true;
         this.moveLeft = true;

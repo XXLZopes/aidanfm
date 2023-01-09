@@ -1,4 +1,4 @@
-const backgroundContainerEl = document.querySelector('#background-con');
+const backgroundContainerEl = document.querySelector('#page1');
 
 const imgConEl = document.querySelector('.img-con');
 
