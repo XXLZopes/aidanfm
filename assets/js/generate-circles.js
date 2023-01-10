@@ -19,7 +19,7 @@ class Circle {
 }
 //Declare circle
 let circle0 = new Circle('0', '0', '15', '#A3BECC', 'hi');
-let circle1 = new Circle('30', '150', '20', 'red', 'hi');
+let circle1 = new Circle('20', '180', '20', 'red', 'hi');
 let circle2 = new Circle('-1', '250', '27', 'red', 'hi');
 let circle3 = new Circle('30', '400', '15', 'red', 'hi');
 let circle4 = new Circle('-1', '700', '33', 'red', 'hi');

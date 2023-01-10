@@ -1,6 +1,9 @@
 const socials1El = document.querySelector('#socials1')
 const socials2El = document.querySelector('#socials2')
 
+const emailEl = document.querySelector('.fa-circle-envelope');
+const email2El = document.querySelector('.email2');
+
 socials1El.style.opacity = 1.0;
 socials2El.style.opacity = 0.0;
 
@@ -28,3 +31,7 @@ if (window.scrollY == 0) {
 window.addEventListener("scroll", function () {
     changeOpacity(socials1El, socials2El, .18, .18);
 })
+
+
+emailEl.addEventListener("click", () => {window.open('mailto:aidan1meyer1@gmail.com')})
+email2El.addEventListener("click", () => {window.open('mailto:aidan1meyer1@gmail.com')})

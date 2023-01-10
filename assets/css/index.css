@@ -3,11 +3,16 @@
     --background-pink: rgb(255, 171, 171);
 
     --color-yellow: #f3fd82;
+    --color-blue: #A3BECC;
     --color-dark: #1E1E1E;
     --color-light: #687278;
 
     --purple-border: rgb(78, 78, 237);
     --green-border: rgb(78, 237, 171);
+
+    --linkedin-blue: #0072b1;
+    --mail-red: #EA4335;
+    --instagram-pink: #C13584;
 }
 
 * {
@@ -25,12 +30,13 @@
 }
 
 .test {
-    height: 150vh;
+    height: 168vh;
 }
 .img-con {
     position:relative;
     z-index: 1;
     padding-bottom: 100px;
+    width: 50%;
 }
 
 .green-border {
@@ -46,6 +52,8 @@
     overflow: hidden;
     position: fixed;
     z-index: 20;
+    border-bottom: solid black 2px;
+    box-shadow: 0px 5px 20px black;
 }
 
 #page2 {
@@ -100,6 +108,7 @@ h1, h2, h3 {
 .landing-intro-img {
     margin: 30px;
     border-radius: 360px;
+    box-shadow: 0px 8px 20px black;
 }
 .landing-intro-txt {
     width: 100%;
@@ -125,4 +134,47 @@ h1, h2, h3 {
     position: fixed;
     bottom: 5%;
     z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+    .landing-intro-img {
+        height: 250px;
+        width: auto;
+    }
+    .landing-intro-con {
+        
+        width: 250px;
+        border-radius: 360px;
+        right: 35%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .landing-intro-con {
+        right: 43%;
+    }
+}
+
+a {
+    color: black;
+}
+
+.fa-circle-envelope:hover {
+    cursor: pointer;
+    color: var(--mail-red);
+}
+
+.fa-instagram-square:hover {
+    cursor: pointer;
+    color: var(--instagram-pink);
+}
+
+.fa-github:hover {
+    cursor: pointer;
+    color: var(--color-light);
+}
+
+.fa-linkedin:hover {
+    cursor: pointer;
+    color: var(--linkedin-blue);
 }
